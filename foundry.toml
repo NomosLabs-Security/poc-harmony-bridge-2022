@@ -1,0 +1,15 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "london"
+
+[profile.default.rpc_endpoints]
+mainnet = "https://rpc.ankr.com/eth"
+
+[profile.default.etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+
+# Fork settings for reproduction
+# Block: 15012646 (Harmony Bridge exploit block)
+# forge test --fork-url https://rpc.ankr.com/eth --fork-block-number 15012646
